@@ -1,0 +1,68 @@
+{
+  "lgb": {
+    "val_auc": 0.6720440557175251,
+    "test_auc": 0.6753535984996484,
+    "test_auc_ci": [
+      0.6021663272711956,
+      0.7495181135733632
+    ],
+    "test_ap": 0.26793123751971437,
+    "best_params": {
+      "n_estimators": 818,
+      "learning_rate": 0.010621841044712579,
+      "num_leaves": 23,
+      "max_depth": 5,
+      "min_child_samples": 15,
+      "subsample": 0.6714963581067779,
+      "colsample_bytree": 0.6634225137632316,
+      "reg_alpha": 1.1648763798469236e-08,
+      "reg_lambda": 2.2929290694556232e-05,
+      "is_unbalance": true,
+      "random_state": 42,
+      "n_jobs": -1,
+      "verbose": -1
+    }
+  },
+  "xgb": {
+    "val_auc": 0.6802073210236474,
+    "test_auc": 0.6740251621473783,
+    "test_auc_ci": [
+      0.6045681432214289,
+      0.7441208537384625
+    ],
+    "best_params": {
+      "n_estimators": 214,
+      "learning_rate": 0.02546684135635216,
+      "max_depth": 6,
+      "min_child_weight": 6,
+      "subsample": 0.9913730644582056,
+      "colsample_bytree": 0.6860014374399344,
+      "reg_alpha": 2.6737697173061954e-08,
+      "reg_lambda": 1.6354307806672293e-06,
+      "scale_pos_weight": 5.227678571428571,
+      "eval_metric": "auc",
+      "tree_method": "hist",
+      "random_state": 42,
+      "n_jobs": -1
+    }
+  },
+  "rf": {
+    "val_auc": 0.6713313896987366,
+    "test_auc": 0.6735172306009222,
+    "test_auc_ci": [
+      0.6037810656366894,
+      0.7355270261031482
+    ]
+  },
+  "ensemble": {
+    "val_auc": 0.6811791383219955,
+    "test_auc": 0.681956708603579,
+    "test_auc_ci": [
+      0.6127143796206653,
+      0.7507191801152173
+    ]
+  },
+  "rfe_best_n_kept_candidates": 20,
+  "rfe_total_features": 31,
+  "fixed_count": 11
+}

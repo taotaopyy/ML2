@@ -1,0 +1,98 @@
+{
+  "rfe_best_n_keep_per_est": 25,
+  "rfe_union_size": 39,
+  "n_fixed": 11,
+  "lgb": {
+    "cv_auc": 0.6532523780567909,
+    "params": {
+      "n_estimators": 240,
+      "learning_rate": 0.010126742683790366,
+      "num_leaves": 21,
+      "max_depth": 11,
+      "min_child_samples": 63,
+      "subsample": 0.6391592473282106,
+      "subsample_freq": 4,
+      "colsample_bytree": 0.5123658550726551,
+      "reg_alpha": 0.0005354772965131455,
+      "reg_lambda": 0.0001404491266228768,
+      "min_split_gain": 0.36904337532026554,
+      "is_unbalance": true,
+      "n_jobs": -1,
+      "verbose": -1
+    }
+  },
+  "xgb": {
+    "cv_auc": 0.6558147163268379,
+    "params": {
+      "n_estimators": 226,
+      "learning_rate": 0.011449378283975709,
+      "max_depth": 10,
+      "min_child_weight": 18,
+      "gamma": 0.15568974190930399,
+      "subsample": 0.9143974959867535,
+      "colsample_bytree": 0.515597580364851,
+      "reg_alpha": 4.393945627057216,
+      "reg_lambda": 0.005702646775768124,
+      "scale_pos_weight": 5.443223443223443,
+      "eval_metric": "auc",
+      "tree_method": "hist",
+      "n_jobs": -1
+    }
+  },
+  "rf": {
+    "cv_auc": 0.6577295395186264,
+    "params": {
+      "n_estimators": 310,
+      "max_depth": 18,
+      "min_samples_leaf": 10,
+      "min_samples_split": 3,
+      "max_features": 0.5,
+      "class_weight": "balanced",
+      "n_jobs": -1
+    }
+  },
+  "test_summary": [
+    {
+      "model": "LGBM_tuned_bagged",
+      "test_auc": 0.6722669375634915,
+      "test_auc_lo": 0.6058311923993341,
+      "test_auc_hi": 0.740140259069304,
+      "test_ap": 0.28205425917503857
+    },
+    {
+      "model": "Ensemble_cvweight",
+      "test_auc": 0.6690239899976558,
+      "test_auc_lo": 0.6000200832129576,
+      "test_auc_hi": 0.7379361282998719,
+      "test_ap": 0.2671747629833852
+    },
+    {
+      "model": "Ensemble_equal",
+      "test_auc": 0.668320700164101,
+      "test_auc_lo": 0.5994672315548345,
+      "test_auc_hi": 0.7375189404338376,
+      "test_ap": 0.26557162586543914
+    },
+    {
+      "model": "RF_tuned_bagged",
+      "test_auc": 0.6654684691724623,
+      "test_auc_lo": 0.6001969403927777,
+      "test_auc_hi": 0.7341343387084059,
+      "test_ap": 0.27978924597465293
+    },
+    {
+      "model": "XGB_tuned_bagged",
+      "test_auc": 0.6622645932640462,
+      "test_auc_lo": 0.5930168276931987,
+      "test_auc_hi": 0.7330066545546132,
+      "test_ap": 0.26253182158553756
+    },
+    {
+      "model": "LogReg_EN",
+      "test_auc": 0.6290146127998749,
+      "test_auc_lo": 0.5592522997333359,
+      "test_auc_hi": 0.6993681054575824,
+      "test_ap": 0.23074268392377045
+    }
+  ]
+}
